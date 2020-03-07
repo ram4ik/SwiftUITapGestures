@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tapped = false
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(tapped ? "Hello, World!" : "Hello, SwiftUI!")
+            .onTapGesture {
+                self.tapped.toggle()
+        }
     }
 }
 
